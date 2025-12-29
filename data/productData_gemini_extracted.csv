@@ -538,7 +538,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""ASUS"": 
-ASUS ROG Strix Scope II 96 Wireless Gaming Keyboard, Tri-Mode Connection, Dampening Foam &amp; Switch-Dampening Pads, Hot-Swappable Pre-lubed ROG NX Snow Switches, PBT Keycaps, RGB-Black : Electronics","{'Brand': 'ASUS ROG', 'Product': 'Wireless Gaming Keyboard'}",ASUS ROG,Wireless Gaming Keyboard
+ASUS ROG Strix Scope II 96 Wireless Gaming Keyboard, Tri-Mode Connection, Dampening Foam &amp; Switch-Dampening Pads, Hot-Swappable Pre-lubed ROG NX Snow Switches, PBT Keycaps, RGB-Black : Electronics","{'Brand': 'ASUS ROG', 'Product': 'Strix Scope II 96 Wireless Gaming Keyboard'}",ASUS ROG,Strix Scope II 96 Wireless Gaming Keyboard
 https://www.amazon.com/dp/B0CG7FQML2,Razer,Razer Huntsman V3 Pro Esports Gaming Keyboard: Analog Optical Switches - Snap Tap Mode - Rapid Trigger - Adjustable Actuation - Media Keys &amp; Dial - Doubleshot PBT Keycaps - Wrist Rest : Video Games,$249.99,4.1 out of 5 stars,211 ratings,Gaming Keyboards,B0CG7FQML2,249.99,4.1,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -629,6 +629,7 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""TECKNET"": 
 TECKNET RGB Gaming Keyboard, 105 Keys, All-Metal Panel, 15-Zone RGB Illumination, Silent Keyboard with Wrist Rest, 25 Anti-ghosting Keys, IP32 Water Resistance, USB Wired Keyboard for PC, Mac, Laptop : Video Games","{'Brand': 'TECKNET', 'Product': 'RGB Gaming Keyboard'}",TECKNET,RGB Gaming Keyboard
+https://www.amazon.com/dp/B0C9ZJHQHM,,"Womier S-K80 75% Keyboard with Color Multimedia Display Mechanical Gaming Keyboard, Hot Swappable Keyboard, Gasket Mount RGB Custom Keyboard, Pre-lubed Stabilizer for Mac/Win, Black Kanagawa Theme : Electronics",$69.99,4.6 out of 5 stars,403 ratings,Gaming Keyboards,B0C9ZJHQHM,69.99,4.6,MISSING,"{'Brand': 'Womier', 'Product': 'S-K80 75% Keyboard'}",Womier,S-K80 75% Keyboard
 https://www.amazon.com/dp/B07ZGDPT4M,SteelSeries,SteelSeries Apex 3 RGB Gaming Keyboard – 10-Zone RGB Illumination – IP32 Water Resistant – Premium Magnetic Wrist Rest (Whisper Quiet Gaming Switch) : Electronics,$40.99,4.7 out of 5 stars,"6,772 ratings",Gaming Keyboards,B07ZGDPT4M,40.99,4.7,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -854,6 +855,7 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Razer"": 
 Razer Huntsman V2 Optical Gaming Keyboard: Fast Linear Optical Switches Gen-2 w/Sound Dampeners &amp; 8000Hz Polling Rate - Doubleshot PBT Keycaps - Dedicated Media Keys &amp; Dial - Ergonomic Wrist Rest : Electronics","{'Brand': 'Razer', 'Product': 'Huntsman V2 Optical Gaming Keyboard'}",Razer,Huntsman V2 Optical Gaming Keyboard
+https://www.amazon.com/dp/B07TVK8WJP,,"Gaming Keyboard and Mouse and Mouse pad and Gaming Headset, Wired LED RGB Backlight Bundle for PC Gamers and Xbox and PS4 Users - 4 in 1 Edition Hornet RX-250 : Video Games",$29.99,4.3 out of 5 stars,"19,575 ratings",Gaming Keyboards,B07TVK8WJP,29.99,4.3,MISSING,"{'Brand': 'Hornet', 'Product': 'Gaming Keyboard and Mouse and Mouse pad and Gaming Headset'}",Hornet,Gaming Keyboard and Mouse and Mouse pad and Gaming Headset
 https://www.amazon.com/dp/B0BVVYW6L6,Womier,"Womier 60% Percent Keyboard, WK61 Mechanical RGB Wired Gaming Keyboard, Hot-Swappable Keyboard with Blue Sea PBT Keycaps for Windows PC Gamers - Linear Red Switch : Video Games",$29.59,4.6 out of 5 stars,"1,254 ratings",Gaming Keyboards,B0BVVYW6L6,29.59,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -1169,6 +1171,141 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Corsair"": 
 Corsair K70 RGB PRO Wired Mechanical Gaming Keyboard (Cherry MX RGB Red Switches: Linear and Fast, 8,000Hz Hyper-Polling, PBT Double-Shot PRO Keycaps, Soft-Touch Palm Rest) QWERTY, NA - Black : Video Games","{'Brand': 'Corsair', 'Product': 'K70 RGB PRO Wired Mechanical Gaming Keyboard'}",Corsair,K70 RGB PRO Wired Mechanical Gaming Keyboard
+https://www.amazon.com/dp/B0BVP619Z5,Rii,"Rii RM200 2.4G Wireless Mouse with USB Nano Receiver, 5 Buttons Rechargeable Mouse,Colorful Backlit RGB Gaming Mouse for Notebook,PC,Computer-Black : Video Games",$12.99,4.3 out of 5 stars,129 ratings,Gaming Mice,B0BVP619Z5,12.99,4.3,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Rii"": 
+Rii RM200 2.4G Wireless Mouse with USB Nano Receiver, 5 Buttons Rechargeable Mouse,Colorful Backlit RGB Gaming Mouse for Notebook,PC,Computer-Black : Video Games","{'Brand': 'Rii', 'Product': 'RM200 2.4G Wireless Mouse'}",Rii,RM200 2.4G Wireless Mouse
+https://www.amazon.com/dp/B07CMS5Q6P,Logitech G,"Logitech G305 LIGHTSPEED Wireless Gaming Mouse, Hero 12K Sensor, 12,000 DPI, Lightweight, 6 Programmable Buttons, 250h Battery Life, On-Board Memory, PC/Mac - Black",,4.6 out of 5 stars,"30,538 ratings",Gaming Mice,B07CMS5Q6P,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Logitech G"": 
+Logitech G305 LIGHTSPEED Wireless Gaming Mouse, Hero 12K Sensor, 12,000 DPI, Lightweight, 6 Programmable Buttons, 250h Battery Life, On-Board Memory, PC/Mac - Black","{'Brand': 'Logitech', 'Product': 'G305 LIGHTSPEED Wireless Gaming Mouse'}",Logitech,G305 LIGHTSPEED Wireless Gaming Mouse
+https://www.amazon.com/dp/B07GBZ4Q68,Logitech G,"Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11 Programmable Buttons, On-Board Memory, PC / Mac : Everything Else",,4.7 out of 5 stars,"52,510 ratings",Gaming Mice,B07GBZ4Q68,,4.7,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Logitech G"": 
+Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11 Programmable Buttons, On-Board Memory, PC / Mac : Everything Else","{'Brand': 'Logitech', 'Product': 'G502 HERO High Performance Wired Gaming Mouse'}",Logitech,G502 HERO High Performance Wired Gaming Mouse
 https://www.amazon.com/dp/B094PS5RZQ,Razer,Razer DeathAdder Essential Gaming Mouse: 6400 DPI Optical Sensor - 5 Programmable Buttons - Mechanical Switches - Rubber Side Grips - Classic Black : Video Games,$24.18,4.4 out of 5 stars,"11,926 ratings",Gaming Mice,B094PS5RZQ,24.18,4.4,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -1304,6 +1441,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Corsair"": 
 Corsair SCIMITAR RGB ELITE Gaming Mouse For MOBA, MMO - 18,000 DPI - 17 Progammable Buttons - iCUE Compatible - Black : Video Games","{'Brand': 'Corsair', 'Product': 'SCIMITAR RGB ELITE Gaming Mouse'}",Corsair,SCIMITAR RGB ELITE Gaming Mouse
+https://www.amazon.com/dp/B07GNDDNMW,SIHOO,SIHOO M18 Ergonomic Office Chair for Big and Tall People Adjustable Headrest with 2D Armrest Lumbar Support and PU Wheels Swivel Tilt Function Black : Office Products,,4.4 out of 5 stars,"12,664 ratings",Home Office Desk Chairs,B07GNDDNMW,,4.4,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""SIHOO"": 
+SIHOO M18 Ergonomic Office Chair for Big and Tall People Adjustable Headrest with 2D Armrest Lumbar Support and PU Wheels Swivel Tilt Function Black : Office Products","{'Brand': 'SIHOO', 'Product': 'M18 Ergonomic Office Chair'}",SIHOO,M18 Ergonomic Office Chair
 https://www.amazon.com/dp/B0797HZ8W1,Duramont,"Duramont Ergonomic Office Chair - Adjustable Desk Chair with Lumbar Support and Rollerblade Wheels - High Back Chairs with Breathable Mesh - Thick Seat Cushion, Head, and Arm Rests - Reclines : Office Products",$299.99,4.2 out of 5 stars,"6,876 ratings",Home Office Desk Chairs,B0797HZ8W1,299.99,4.2,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -1439,6 +1621,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""SIHOO"": 
 SIHOO M57 Ergonomic Office Chair with 3 Way Armrests Lumbar Support and Adjustable Headrest High Back Tilt Function Black : Home &amp; Kitchen","{'Brand': 'SIHOO', 'Product': 'M57 Ergonomic Office Chair'}",SIHOO,M57 Ergonomic Office Chair
+https://www.amazon.com/dp/B09BB6LZNK,Sytas,"Sytas Home Office Chair Ergonomic, Mesh Desk Chair Lumbar Support, Ergonomic Computer Chair Adjustable Armrest : Home &amp; Kitchen",$129.99,4.3 out of 5 stars,"2,538 ratings",Home Office Desk Chairs,B09BB6LZNK,129.99,4.3,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Sytas"": 
+Sytas Home Office Chair Ergonomic, Mesh Desk Chair Lumbar Support, Ergonomic Computer Chair Adjustable Armrest : Home &amp; Kitchen","{'Brand': 'Sytas', 'Product': 'Home Office Chair Ergonomic'}",Sytas,Home Office Chair Ergonomic
 https://www.amazon.com/dp/B081H3Y5NW,Amazon Basics,"Amazon Basics Classic Puresoft PU Padded Mid-Back Office Computer Desk Chair with Armrest, 26""D x 23.75""W x 42""H, Black : Home &amp; Kitchen",$85.91,4.2 out of 5 stars,"36,277 ratings",Home Office Desk Chairs,B081H3Y5NW,85.91,4.2,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -1573,7 +1800,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""Marsail"": 
-Marsail Ergonomic Office Chair: Office Computer Desk Chair with High Back Mesh and Adjustable Lumbar Support Rolling Work Swivel Task Chairs with Wheel 3D Armrests and Headrest : Office Products","{'Brand': 'Marsail', 'Product': 'Eronomic Office Chair'}",Marsail,Eronomic Office Chair
+Marsail Ergonomic Office Chair: Office Computer Desk Chair with High Back Mesh and Adjustable Lumbar Support Rolling Work Swivel Task Chairs with Wheel 3D Armrests and Headrest : Office Products","{'Brand': 'Marsail', 'Product': 'Ergonomic Office Chair'}",Marsail,Ergonomic Office Chair
 https://www.amazon.com/dp/B0C4GVM9LY,Winrise,"Winrise Office Chair Desk Chair, Ergonomic Mesh Computer Chair Home Office Desk Chairs, Swivel Task Chair Mid Back Breathable Rolling Chair with Adjustable Lumbar Support Flip Up Armrest (Black) : Home &amp; Kitchen",$109.99,4.4 out of 5 stars,973 ratings,Home Office Desk Chairs,B0C4GVM9LY,109.99,4.4,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -2114,6 +2341,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""DFLIVE"": 
 Ergonomic Office Chair, SGS Certified Gas Cylinder, 400 LBS Capacity,Office Chair with Adjustable Lumbar Support, Retractable Footrest, Mesh Office Chair Gaming Chair : Office Products","{'Brand': 'Unknown', 'Product': 'Ergonomic Office Chair'}",Unknown,Ergonomic Office Chair
+https://www.amazon.com/dp/B09D33BXHL,X XISHE,"Office Chair Ergonomic Desk Chair, Computer PU Leather Home Office Desk Chair, Mesh Adjustable Lumbar Support Flip-up Armrests Executive Task Chair : Home &amp; Kitchen",,4.6 out of 5 stars,"2,766 ratings",Home Office Desk Chairs,B09D33BXHL,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""X XISHE"": 
+Office Chair Ergonomic Desk Chair, Computer PU Leather Home Office Desk Chair, Mesh Adjustable Lumbar Support Flip-up Armrests Executive Task Chair : Home &amp; Kitchen","{'Brand': 'Unknown', 'Product': 'Office Chair'}",Unknown,Office Chair
 https://www.amazon.com/dp/B0BG1H99FB,FelixKing,"FelixKing Office Chair, Ergonomic Desk Chair Breathable Mesh Chair with Adjustable High Back Lumbar Support Flip-up Armrests, Executive Rolling Swivel Comfy Task Computer Chair for Home Office : Home &amp; Kitchen",$149.99,4.4 out of 5 stars,"1,238 ratings",Home Office Desk Chairs,B0BG1H99FB,149.99,4.4,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -2204,51 +2476,6 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""FelixKing"": 
 FelixKing Office Chair Ergonomic Desk Chair with Headrest, High Back Computer Chair with Adjustable Lumbar Support and Wheels,Executive Swivel Comfy Chair with flip-up Armrests for Home Office : Home &amp; Kitchen","{'Brand': 'FelixKing', 'Product': 'Office Chair'}",FelixKing,Office Chair
-https://www.amazon.com/dp/B0CF24ZDK7,Brick Attic,"Brick Attic Office Chair, Ergonomic Desk Chair with Lumbar Support and Flip-up Armrest, Height Adjustable Mesh Swivel Computer Office Chair Black : Home &amp; Kitchen",$139.99,4.4 out of 5 stars,228 ratings,Home Office Desk Chairs,B0CF24ZDK7,139.99,4.4,"
-You will extract the brand and product name from a product description text. Follow these steps precisely:
-
-1. First, analyze the input text carefully inside <thinking> tags:
-   - Look for the brand name, typically at the start or in a specific location
-   - Identify the product name, which usually follows the brand name
-   - Consider different text formats and potential variations
-
-2. Parse the text using these rules:
-   - Brand is typically the first word or a capitalized name before the product description
-   - Product name is the general category or specific type of item
-   - Ignore additional descriptive text after the product name
-
-3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
-**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
-
-4. Important guidelines:
-   - Be precise in extraction
-   - If unsure, default to the most prominent text
-   - Trim any extra whitespace
-   - Do not include additional descriptors beyond the core brand and product name
-
-Example process:
-<example>
-Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
-<thinking>
-- Brand: RisoPhy
-- Product: Mechanical Gaming Keyboard
-</thinking>
-Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
-</example>
-
-5. Generate the final output inside <result> tags:
-<result>
-{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
-</result>
-
-If no clear brand or product can be determined, return:
-<result>
-{Brand: ""Unknown"", Product: ""Unknown""}
-</result>
-
-Here is the text that you need to analyze associated with the given brand
-""Brick Attic"": 
-Brick Attic Office Chair, Ergonomic Desk Chair with Lumbar Support and Flip-up Armrest, Height Adjustable Mesh Swivel Computer Office Chair Black : Home &amp; Kitchen","{'Brand': 'Brick Attic', 'Product': 'Office Chair'}",Brick Attic,Office Chair
 https://www.amazon.com/dp/B0BLJLP7FM,PatioMage,"PatioMage Ergonomic Mesh Office Chair with 3D Adjustable Armrest,High Back Desk Computer Chair Ergo3d Ergonomic Office Chair with Wheels for Home &amp; Office Black : Home &amp; Kitchen",$349.99,4.5 out of 5 stars,712 ratings,Home Office Desk Chairs,B0BLJLP7FM,349.99,4.5,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -2564,6 +2791,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Marsail"": 
 Marsail Office Chair Ergonomic Desk Chair with 3 Ways PU Armrests and Adjustable Lumbar Support Breathable Mesh Computer Chair Executive Rolling Swivel Comfy Task Chair for Home Office Gaming : Office Products","{'Brand': 'Marsail', 'Product': 'Office Chair'}",Marsail,Office Chair
+https://www.amazon.com/dp/B0CL4S7FRC,DUMOS,"DUMOS Armless Home Office Chair Ergonomic Desk with Comfy Low Back Lumbar Support, Height Adjustable PU Leather Computer Task with 360° Swivel Wheels, for Small Space, Kids and Adults, Beige White : Home &amp; Kitchen",,4.6 out of 5 stars,706 ratings,Home Office Desk Chairs,B0CL4S7FRC,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""DUMOS"": 
+DUMOS Armless Home Office Chair Ergonomic Desk with Comfy Low Back Lumbar Support, Height Adjustable PU Leather Computer Task with 360° Swivel Wheels, for Small Space, Kids and Adults, Beige White : Home &amp; Kitchen","{'Brand': 'DUMOS', 'Product': 'Armless Home Office Chair'}",DUMOS,Armless Home Office Chair
 https://www.amazon.com/dp/B0CQD4MTWM,TRALT,"TRALT Office Chair - Ergonomic Desk Chair with Adjustable Lumbar Support, Mesh Computer Chair, Executive Chair for Home Office Comfortable Lumbar Support (White) : Home &amp; Kitchen",$142.49,4.3 out of 5 stars,361 ratings,Home Office Desk Chairs,B0CQD4MTWM,142.49,4.3,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -2789,6 +3061,96 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Casaottima"": 
 Casaottima L Shaped Gaming Desk with Monitor Stand, Corner Desk Gaming Table for Home Office, Computer Desk Sturdy Writing Workstation for Small Space, 51 inch, Carbon Fiber Surface, Black : Home &amp; Kitchen","{'Brand': 'Casaottima', 'Product': 'L Shaped Gaming Desk'}",Casaottima,L Shaped Gaming Desk
+https://www.amazon.com/dp/B09Q8WJCTM,MINOSYS,"MINOSYS Gaming/Computer Desk - 47” Home Office Small Desk with Monitor Stand, Rustic Writing Desk for 2 Monitors, Adjustable Storage Space, Modern Design Corner Table. : Home &amp; Kitchen",,4.5 out of 5 stars,"4,147 ratings",Home Office Desks,B09Q8WJCTM,,4.5,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""MINOSYS"": 
+MINOSYS Gaming/Computer Desk - 47” Home Office Small Desk with Monitor Stand, Rustic Writing Desk for 2 Monitors, Adjustable Storage Space, Modern Design Corner Table. : Home &amp; Kitchen","{'Brand': 'MINOSYS', 'Product': 'Gaming/Computer Desk'}",MINOSYS,Gaming/Computer Desk
+https://www.amazon.com/dp/B0BNL17K27,GreenForest,"GreenForest Computer Desk with USB Charging Port and Power Outlet, Reversible Small Desk with Monitor Stand and Storage Shelves for Home Office, 40 in Work Desk with Cup Holder Hook, White : Home &amp; Kitchen",,4.5 out of 5 stars,631 ratings,Home Office Desks,B0BNL17K27,,4.5,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""GreenForest"": 
+GreenForest Computer Desk with USB Charging Port and Power Outlet, Reversible Small Desk with Monitor Stand and Storage Shelves for Home Office, 40 in Work Desk with Cup Holder Hook, White : Home &amp; Kitchen","{'Brand': 'GreenForest', 'Product': 'Computer Desk'}",GreenForest,Computer Desk
 https://www.amazon.com/dp/B0C9PFRJ3Q,Furologee,"Furologee White Computer Desk with Drawer and Power Outlets, 47"" Office Desk with 2 Monitor Stands and Fabric File Cabinet, Writing Gaming Table with Shelves and 2 Hooks for Home Office : Home &amp; Kitchen",$109.99,4.5 out of 5 stars,"1,073 ratings",Home Office Desks,B0C9PFRJ3Q,109.99,4.5,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -2878,7 +3240,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""Huuger"": 
-Huuger 47 Inch Computer Desk with Power Outlets and LED Lights, Gaming Desk with 4 Drawers, Office Desk with Monitor Stand, Study Desk Work Desk for Home Office, Small Spaces, Gray : Home &amp; Kitchen","{'Brand': 'Huuger', 'Product': '47 Inch Computer Desk'}",Huuger,47 Inch Computer Desk
+Huuger 47 Inch Computer Desk with Power Outlets and LED Lights, Gaming Desk with 4 Drawers, Office Desk with Monitor Stand, Study Desk Work Desk for Home Office, Small Spaces, Gray : Home &amp; Kitchen","{'Brand': 'Huuger', 'Product': 'Computer Desk'}",Huuger,Computer Desk
 https://www.amazon.com/dp/B092HWHSWX,ODK,"ODK Small Desk, 27.5 Inch Small Computer Desk for Small Spaces, Compact Desk with Storage, Tiny Desk Study Desk with Monitor Stand for Home Office, Espresso : Home &amp; Kitchen",$55.99,4.7 out of 5 stars,"1,774 ratings",Home Office Desks,B092HWHSWX,55.99,4.7,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -3148,7 +3510,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""CHESSNIC"": 
-Ergonomic Mesh Office Chair with Lumbar Support- Adjustable High Back Desk Chair with Flip-up Arms- Comfy Home Office Computer Chair Task Swivel Rolling Chairs : Office Products","{'Brand': 'Unknown', 'Product': 'Mesh Office Chair'}",Unknown,Mesh Office Chair
+Ergonomic Mesh Office Chair with Lumbar Support- Adjustable High Back Desk Chair with Flip-up Arms- Comfy Home Office Computer Chair Task Swivel Rolling Chairs : Office Products","{'Brand': 'Unknown', 'Product': 'Eronomic Mesh Office Chair'}",Unknown,Eronomic Mesh Office Chair
 https://www.amazon.com/dp/B07V8ZMFDQ,Amazon Basics,"Amazon Basics Ergonomic Executive Office Desk Chair with Flip-up Armrests and Adjustable Height, Tilt and Lumbar Support, Cream Bonded Leather, 29.5""D x 28""W x 43""H (Previously AmazonCommercial brand) : Office Products",$180.34,4.3 out of 5 stars,"3,355 ratings",Managerial & Executive Chairs,B07V8ZMFDQ,180.34,4.3,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -3194,51 +3556,6 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Amazon Basics"": 
 Amazon Basics Ergonomic Executive Office Desk Chair with Flip-up Armrests and Adjustable Height, Tilt and Lumbar Support, Cream Bonded Leather, 29.5""D x 28""W x 43""H (Previously AmazonCommercial brand) : Office Products","{'Brand': 'Amazon Basics', 'Product': 'Ergonomic Executive Office Desk Chair'}",Amazon Basics,Ergonomic Executive Office Desk Chair
-https://www.amazon.com/dp/B0CSPK522Y,HUANUO,"HUANUO Ergonomic Office Chair, High Back Desk Chair with S-shaped Backrest, Adjustable Lumbar Support, Headrest, Armrest, Mesh Computer Chair with Thicker Seat Cushion and Tilt Function, Black : Office Products",$139.99,4.7 out of 5 stars,47 ratings,Managerial & Executive Chairs,B0CSPK522Y,139.99,4.7,"
-You will extract the brand and product name from a product description text. Follow these steps precisely:
-
-1. First, analyze the input text carefully inside <thinking> tags:
-   - Look for the brand name, typically at the start or in a specific location
-   - Identify the product name, which usually follows the brand name
-   - Consider different text formats and potential variations
-
-2. Parse the text using these rules:
-   - Brand is typically the first word or a capitalized name before the product description
-   - Product name is the general category or specific type of item
-   - Ignore additional descriptive text after the product name
-
-3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
-**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
-
-4. Important guidelines:
-   - Be precise in extraction
-   - If unsure, default to the most prominent text
-   - Trim any extra whitespace
-   - Do not include additional descriptors beyond the core brand and product name
-
-Example process:
-<example>
-Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
-<thinking>
-- Brand: RisoPhy
-- Product: Mechanical Gaming Keyboard
-</thinking>
-Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
-</example>
-
-5. Generate the final output inside <result> tags:
-<result>
-{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
-</result>
-
-If no clear brand or product can be determined, return:
-<result>
-{Brand: ""Unknown"", Product: ""Unknown""}
-</result>
-
-Here is the text that you need to analyze associated with the given brand
-""HUANUO"": 
-HUANUO Ergonomic Office Chair, High Back Desk Chair with S-shaped Backrest, Adjustable Lumbar Support, Headrest, Armrest, Mesh Computer Chair with Thicker Seat Cushion and Tilt Function, Black : Office Products","{'Brand': 'HUANUO', 'Product': 'Ergonomic Office Chair'}",HUANUO,Ergonomic Office Chair
 https://www.amazon.com/dp/B005EJH6Z4,Amazon Basics,"Amazon Basics 2.4 Ghz Wireless Optical Computer Mouse with USB Nano Receiver, Black : Electronics",$9.88,4.5 out of 5 stars,"56,455 ratings",Mice,B005EJH6Z4,9.88,4.5,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -3824,7 +4141,7 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""VssoPlor"": 
 VssoPlor Wireless Mouse, 2.4G Slim Portable Computer Mice with Nano Receiver for Notebook, PC, Laptop, Computer (Black and Gold) : Electronics","{'Brand': 'VssoPlor', 'Product': 'Wireless Mouse'}",VssoPlor,Wireless Mouse
-https://www.amazon.com/dp/B09J1TB35S,Logitech,"Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB receiver, Quiet clicks, 4 buttons, compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite : Electronics",$65.99,4.6 out of 5 stars,"8,984 ratings",Mice,B09J1TB35S,65.99,4.6,"
+https://www.amazon.com/dp/B0BNK6F4QV,Bonuci,Bonuci 30 Pcs USB Wired Mouse Computer 3 Button Mice Bulk Corded USB Mouse for PC Desktop Laptop Computer Office School Home Classroom Supplies (Black) : Electronics,$41.99,4.3 out of 5 stars,44 ratings,Mice,B0BNK6F4QV,41.99,4.3,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
 1. First, analyze the input text carefully inside <thinking> tags:
@@ -3867,8 +4184,8 @@ If no clear brand or product can be determined, return:
 </result>
 
 Here is the text that you need to analyze associated with the given brand
-""Logitech"": 
-Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB receiver, Quiet clicks, 4 buttons, compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite : Electronics","{'Brand': 'Logitech', 'Product': 'Lift Vertical Ergonomic Mouse'}",Logitech,Lift Vertical Ergonomic Mouse
+""Bonuci"": 
+Bonuci 30 Pcs USB Wired Mouse Computer 3 Button Mice Bulk Corded USB Mouse for PC Desktop Laptop Computer Office School Home Classroom Supplies (Black) : Electronics","{'Brand': 'Bonuci', 'Product': 'USB Wired Mouse'}",Bonuci,USB Wired Mouse
 https://www.amazon.com/dp/B0C4XXH2FV,Logitech,"Logitech MX Master 2S Bluetooth Edition Wireless Mouse – Use on Any Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Control Up to 3 Apple Mac and Windows Computers - Graphite : Electronics",$63.99,4.4 out of 5 stars,378 ratings,Mice,B0C4XXH2FV,63.99,4.4,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -3959,6 +4276,186 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Logitech"": 
 Logitech M170 Wireless Mouse for PC, Mac, Laptop, 2.4 GHz with USB Mini Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous - Rose : Electronics","{'Brand': 'Logitech', 'Product': 'M170 Wireless Mouse'}",Logitech,M170 Wireless Mouse
+https://www.amazon.com/dp/B00C5H5DN0,VIVO,VIVO STAND-V002F Dual LED LCD Monitor Free-Standing Desk Stand for 2 Screens up to 27 Inch Heavy-Duty Fully Adjustable Arms with Max VESA 100x100mm : Electronics,,4.5 out of 5 stars,"15,437 ratings",Monitor Arms,B00C5H5DN0,,4.5,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""VIVO"": 
+VIVO STAND-V002F Dual LED LCD Monitor Free-Standing Desk Stand for 2 Screens up to 27 Inch Heavy-Duty Fully Adjustable Arms with Max VESA 100x100mm : Electronics","{'Brand': 'VIVO', 'Product': 'STAND-V002F Dual LED LCD Monitor Free-Standing Desk Stand'}",VIVO,STAND-V002F Dual LED LCD Monitor Free-Standing Desk Stand
+https://www.amazon.com/dp/B07T5SY43L,HUANUO,"HUANUO Dual Monitor Stand - Full Adjustable Monitor Desk Mount Swivel Vesa Bracket with C Clamp, Grommet Mounting Base for 13 to 30 Inch Computer Screens - Each Arm Holds 4.4 to 19.8lbs : Electronics",,4.6 out of 5 stars,"27,356 ratings",Monitor Arms,B07T5SY43L,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""HUANUO"": 
+HUANUO Dual Monitor Stand - Full Adjustable Monitor Desk Mount Swivel Vesa Bracket with C Clamp, Grommet Mounting Base for 13 to 30 Inch Computer Screens - Each Arm Holds 4.4 to 19.8lbs : Electronics","{'Brand': 'HUANUO', 'Product': 'Dual Monitor Stand'}",HUANUO,Dual Monitor Stand
+https://www.amazon.com/dp/B0CQL8DFLW,HUANUO,"HUANUO Monitor Stand, Holds up to 44lbs Freestanding VESA Monitor Mount for 13″–34″ Screens, 5 Height Options, Swivel Desk Monitor Stand Riser with 360° Rotation, 75x75mm/100x100mm VESA : Electronics",,4.5 out of 5 stars,81 ratings,Monitor Arms,B0CQL8DFLW,,4.5,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""HUANUO"": 
+HUANUO Monitor Stand, Holds up to 44lbs Freestanding VESA Monitor Mount for 13″–34″ Screens, 5 Height Options, Swivel Desk Monitor Stand Riser with 360° Rotation, 75x75mm/100x100mm VESA : Electronics","{'Brand': 'HUANUO', 'Product': 'Monitor Stand'}",HUANUO,Monitor Stand
+https://www.amazon.com/dp/B078KNH4H7,VIVO,"VIVO Freestanding Dual Monitor Stand with Sleek Glass Base and Adjustable Arms, Mounts 2 Screens up to 32 inch and 22 lbs Each, Black, STAND-V002FG : Electronics",,4.6 out of 5 stars,"2,265 ratings",Monitor Arms,B078KNH4H7,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""VIVO"": 
+VIVO Freestanding Dual Monitor Stand with Sleek Glass Base and Adjustable Arms, Mounts 2 Screens up to 32 inch and 22 lbs Each, Black, STAND-V002FG : Electronics","{'Brand': 'VIVO', 'Product': 'Freestanding Dual Monitor Stand'}",VIVO,Freestanding Dual Monitor Stand
 https://www.amazon.com/dp/B07DHK5DHN,Amazon Basics,"Amazon Basics Single Computer Monitor Stand Height Adjustable Desk Arm Mount, Steel, 30 inches, Black : Electronics",$26.64,4.4 out of 5 stars,"14,927 ratings",Monitor Arms,B07DHK5DHN,26.64,4.4,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4318,7 +4815,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""SweeEase"": 
-SweeEase Computer Monitor Stand Riser for Desk, 2 Pack Adjustable Pc Laptop Tv Desktop Monitor Metal Stand Riser with Cable Straps, Screen Floor Shelf Holder Stand for Desk, Floor, Carpet, Organizer : Electronics","{'Brand': 'SweeEase', 'Product': 'Computer Monitor Stand Riser for Desk'}",SweeEase,Computer Monitor Stand Riser for Desk
+SweeEase Computer Monitor Stand Riser for Desk, 2 Pack Adjustable Pc Laptop Tv Desktop Monitor Metal Stand Riser with Cable Straps, Screen Floor Shelf Holder Stand for Desk, Floor, Carpet, Organizer : Electronics","{'Brand': 'SweeEase', 'Product': 'Computer Monitor Stand Riser'}",SweeEase,Computer Monitor Stand Riser
 https://www.amazon.com/dp/B07NQMC2RB,HUANUO,"HUANUO Monitor Stand for Desk, Computer Monitor Stand Height Adjustable, Monitor Riser for 2 Monitors, Laptop Stand for Desk, 2 Pack, Black",$29.99,4.7 out of 5 stars,"3,972 ratings",Monitor Stands,B07NQMC2RB,29.99,4.7,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4498,7 +4995,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""AMERIERGO"": 
-AMERIERGO Dual Monitor Stand Riser for 2 Monitors, Monitor Stand for Desk, Adjustable Computer Monitor Stand with 2 Slot, Multifunctional Desktop Organizer Stand for Laptop, PC, Computer, Printer : Electronics","{'Brand': 'AMERIERGO', 'Product': 'Dual Monitor Stand Riser'}",AMERIERGO,Dual Monitor Stand Riser
+AMERIERGO Dual Monitor Stand Riser for 2 Monitors, Monitor Stand for Desk, Adjustable Computer Monitor Stand with 2 Slot, Multifunctional Desktop Organizer Stand for Laptop, PC, Computer, Printer : Electronics","{'Brand': 'AMERIERGO', 'Product': 'Dual Monitor Stand Riser for 2 Monitors'}",AMERIERGO,Dual Monitor Stand Riser for 2 Monitors
 https://www.amazon.com/dp/B09NFQML72,Simple Trending,"Simple Trending-Metal Monitor Stand Riser and Computer Desk Organizer with Drawer for Laptop, Computer, iMac, Black : Electronics",$26.87,4.6 out of 5 stars,"2,156 ratings",Monitor Stands,B09NFQML72,26.87,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4634,6 +5131,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""ELIVED"": 
 ELIVED 2 Pack Monitor Stand Riser - 3 Height Adjustable Monitor Stand for Laptop, Computer, PC, Printer, Mesh Metal Monitor Riser for Desktop Organizer. : Electronics","{'Brand': 'ELIVED', 'Product': 'Monitor Stand Riser'}",ELIVED,Monitor Stand Riser
+https://www.amazon.com/dp/B07H4DMLVH,HUANUO,"Amazon.com : HUANUO Monitor Stand, Monitor Stand Riser 3 Height Adjustable, Monitor Riser with Airflow Vents, Laptop Stand for Desk, Laptop Riser, Desk Organizer for Monitor, 15.6"" Laptop, PC, Printer : Office Products",,4.7 out of 5 stars,"18,303 ratings",Monitor Stands,B07H4DMLVH,,4.7,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""HUANUO"": 
+Amazon.com : HUANUO Monitor Stand, Monitor Stand Riser 3 Height Adjustable, Monitor Riser with Airflow Vents, Laptop Stand for Desk, Laptop Riser, Desk Organizer for Monitor, 15.6"" Laptop, PC, Printer : Office Products","{'Brand': 'HUANUO', 'Product': 'Monitor Stand'}",HUANUO,Monitor Stand
 https://www.amazon.com/dp/B0C4T2KMJ2,BONTEC,"BONTEC Dual Monitor Stand Riser with Smartphone Holder, Adjustable Length &amp; Swivel Angle Wooden Desktop Organizer Stand PC Riser for PC Monitor Laptop Printer, Rustic Brown : Electronics",$29.99,4.6 out of 5 stars,708 ratings,Monitor Stands,B0C4T2KMJ2,29.99,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4679,51 +5221,6 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""BONTEC"": 
 BONTEC Dual Monitor Stand Riser with Smartphone Holder, Adjustable Length &amp; Swivel Angle Wooden Desktop Organizer Stand PC Riser for PC Monitor Laptop Printer, Rustic Brown : Electronics","{'Brand': 'BONTEC', 'Product': 'Dual Monitor Stand Riser'}",BONTEC,Dual Monitor Stand Riser
-https://www.amazon.com/dp/B07M6Y7355,EMEET,"EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Webcam for Online Calling/Conferencing, Zoom/Skype/Facetime/YouTube, Laptop/PC : Electronics",$34.99,4.3 out of 5 stars,"28,847 ratings",Webcams,B07M6Y7355,34.99,4.3,"
-You will extract the brand and product name from a product description text. Follow these steps precisely:
-
-1. First, analyze the input text carefully inside <thinking> tags:
-   - Look for the brand name, typically at the start or in a specific location
-   - Identify the product name, which usually follows the brand name
-   - Consider different text formats and potential variations
-
-2. Parse the text using these rules:
-   - Brand is typically the first word or a capitalized name before the product description
-   - Product name is the general category or specific type of item
-   - Ignore additional descriptive text after the product name
-
-3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
-**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
-
-4. Important guidelines:
-   - Be precise in extraction
-   - If unsure, default to the most prominent text
-   - Trim any extra whitespace
-   - Do not include additional descriptors beyond the core brand and product name
-
-Example process:
-<example>
-Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
-<thinking>
-- Brand: RisoPhy
-- Product: Mechanical Gaming Keyboard
-</thinking>
-Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
-</example>
-
-5. Generate the final output inside <result> tags:
-<result>
-{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
-</result>
-
-If no clear brand or product can be determined, return:
-<result>
-{Brand: ""Unknown"", Product: ""Unknown""}
-</result>
-
-Here is the text that you need to analyze associated with the given brand
-""EMEET"": 
-EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Webcam for Online Calling/Conferencing, Zoom/Skype/Facetime/YouTube, Laptop/PC : Electronics","{'Brand': 'EMEET', 'Product': '1080P Webcam'}",EMEET,1080P Webcam
 https://www.amazon.com/dp/B07K986YLL,Logitech,"Logitech C920S HD Pro Webcam, Full HD 1080p/30fps Video Calling, Clear Stereo Audio, Light Correction, Privacy Shutter, Works with Skype, Zoom, FaceTime, Hangouts, PC/Mac/Laptop/Tablet/XBox - Black : Electronics",$65.00,4.6 out of 5 stars,"3,115 ratings",Webcams,B07K986YLL,65.0,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4769,6 +5266,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Logitech"": 
 Logitech C920S HD Pro Webcam, Full HD 1080p/30fps Video Calling, Clear Stereo Audio, Light Correction, Privacy Shutter, Works with Skype, Zoom, FaceTime, Hangouts, PC/Mac/Laptop/Tablet/XBox - Black : Electronics","{'Brand': 'Logitech', 'Product': 'C920S HD Pro Webcam'}",Logitech,C920S HD Pro Webcam
+https://www.amazon.com/dp/B088TSR6YJ,NexiGo,"NexiGo N60 1080P Webcam with Microphone, Adjustable FOV, Zoom, Software Control &amp; Privacy Cover, USB HD Computer Web Camera, Plug and Play, for Zoom/Skype/Teams, Conferencing and Video Calling : Electronics",,4.3 out of 5 stars,"41,690 ratings",Webcams,B088TSR6YJ,,4.3,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""NexiGo"": 
+NexiGo N60 1080P Webcam with Microphone, Adjustable FOV, Zoom, Software Control &amp; Privacy Cover, USB HD Computer Web Camera, Plug and Play, for Zoom/Skype/Teams, Conferencing and Video Calling : Electronics","{'Brand': 'NexiGo', 'Product': 'N60 1080P Webcam with Microphone'}",NexiGo,N60 1080P Webcam with Microphone
 https://www.amazon.com/dp/B0BYCPNT1F,Angetube,"Angetube 4K AI Webcam: AI-Trackig Web Camera Dual AI Noise-Cancelling Microphones - HDR-Enabled, USB 3.0, Remote Control, Sony_Sensor, Adjutable Field of View, Work with Teams, Zoom, Webex : Electronics",$148.85,4.6 out of 5 stars,471 ratings,Webcams,B0BYCPNT1F,148.85,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4814,6 +5356,51 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""Angetube"": 
 Angetube 4K AI Webcam: AI-Trackig Web Camera Dual AI Noise-Cancelling Microphones - HDR-Enabled, USB 3.0, Remote Control, Sony_Sensor, Adjutable Field of View, Work with Teams, Zoom, Webex : Electronics","{'Brand': 'Angetube', 'Product': '4K AI Webcam'}",Angetube,4K AI Webcam
+https://www.amazon.com/dp/B085TFF7M1,Logitech,"Logitech C920x HD Pro Webcam, Full HD 1080p/30fps Video Calling, Clear Stereo Audio, HD Light Correction, Works with Skype, Zoom, FaceTime, Hangouts, PC/Mac/Laptop/Macbook/Tablet - Black : Electronics",,4.6 out of 5 stars,"19,585 ratings",Webcams,B085TFF7M1,,4.6,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Logitech"": 
+Logitech C920x HD Pro Webcam, Full HD 1080p/30fps Video Calling, Clear Stereo Audio, HD Light Correction, Works with Skype, Zoom, FaceTime, Hangouts, PC/Mac/Laptop/Macbook/Tablet - Black : Electronics","{'Brand': 'Logitech', 'Product': 'C920x HD Pro Webcam'}",Logitech,C920x HD Pro Webcam
 https://www.amazon.com/dp/B0CZQ39524,TOUCAN,"1080P Webcam with Microphone,Clear Stereo Audio, Auto-Light Balance Streaming Webcam, 115°View Computer Camera,Plug and Play USB Webcam for Skype, Zoom, FaceTime, Hangouts, PC/Laptop/Macbook/Tablet : Electronics",$19.99,3.9 out of 5 stars,41 ratings,Webcams,B0CZQ39524,19.99,3.9,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -4858,7 +5445,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""TOUCAN"": 
-1080P Webcam with Microphone,Clear Stereo Audio, Auto-Light Balance Streaming Webcam, 115°View Computer Camera,Plug and Play USB Webcam for Skype, Zoom, FaceTime, Hangouts, PC/Laptop/Macbook/Tablet : Electronics","{'Brand': 'Unknown', 'Product': 'Webcam'}",Unknown,Webcam
+1080P Webcam with Microphone,Clear Stereo Audio, Auto-Light Balance Streaming Webcam, 115°View Computer Camera,Plug and Play USB Webcam for Skype, Zoom, FaceTime, Hangouts, PC/Laptop/Macbook/Tablet : Electronics","{'Brand': 'Unknown', 'Product': '1080P Webcam'}",Unknown,1080P Webcam
 https://www.amazon.com/dp/B0BRPRQJ1D,DEPSTECH,"DEPSTECH Webcam 4K, Zoomable Webcam with Microphone and Remote, Equipped with Sony Sensor, 3X Digital Zoom, Noise-Canceling Mics, Auto-Focus Computer Camera for PC/Mac/Laptop/Zoom/Teams/OBS/Google : Electronics",$79.99,4.3 out of 5 stars,961 ratings,Webcams,B0BRPRQJ1D,79.99,4.3,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -5218,7 +5805,7 @@ If no clear brand or product can be determined, return:
 
 Here is the text that you need to analyze associated with the given brand
 ""Tewiky"": 
-Full HD Webcam with Built-in Microphone and Rotatable Tripod, 1080P Video and Wide Angle Camera, Privacy Cover, for Desktop PC or Laptop Computer : Electronics","{'Brand': 'Unknown', 'Product': 'Full HD Webcam'}",Unknown,Full HD Webcam
+Full HD Webcam with Built-in Microphone and Rotatable Tripod, 1080P Video and Wide Angle Camera, Privacy Cover, for Desktop PC or Laptop Computer : Electronics","{'Brand': 'Unknown', 'Product': 'Webcam'}",Unknown,Webcam
 https://www.amazon.com/dp/B01LXCDPPK,Logitech,"Logitech C922x Pro Stream Webcam – Full 1080p HD Camera, Black : Electronics",$74.08,4.7 out of 5 stars,"16,609 ratings",Webcams,B01LXCDPPK,74.08,4.7,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
@@ -5534,7 +6121,7 @@ If no clear brand or product can be determined, return:
 Here is the text that you need to analyze associated with the given brand
 ""GUSGU"": 
 GUSGU G910 2K Quad HD Webcam for PC, with Microphone &amp; Light &amp; Privacy Cover, Web Camera for Desktop Computer/Laptop/MacBook, USB Streaming Camera : Electronics","{'Brand': 'GUSGU', 'Product': 'G910 2K Quad HD Webcam'}",GUSGU,G910 2K Quad HD Webcam
-https://www.amazon.com/dp/B0BVP619Z5,Rii,"Rii RM200 2.4G Wireless Mouse with USB Nano Receiver, 5 Buttons Rechargeable Mouse,Colorful Backlit RGB Gaming Mouse for Notebook,PC,Computer-Black : Video Games",$12.99,4.3 out of 5 stars,129 ratings,Gaming Mice,B0BVP619Z5,12.99,4.3,"
+https://www.amazon.com/dp/B0CSPK522Y,HUANUO,"HUANUO Ergonomic Office Chair, High Back Desk Chair with S-shaped Backrest, Adjustable Lumbar Support, Headrest, Armrest, Mesh Computer Chair with Thicker Seat Cushion and Tilt Function, Black : Office Products",$139.99,4.7 out of 5 stars,47 ratings,Managerial & Executive Chairs,B0CSPK522Y,139.99,4.7,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
 1. First, analyze the input text carefully inside <thinking> tags:
@@ -5577,9 +6164,9 @@ If no clear brand or product can be determined, return:
 </result>
 
 Here is the text that you need to analyze associated with the given brand
-""Rii"": 
-Rii RM200 2.4G Wireless Mouse with USB Nano Receiver, 5 Buttons Rechargeable Mouse,Colorful Backlit RGB Gaming Mouse for Notebook,PC,Computer-Black : Video Games","{'Brand': 'Rii', 'Product': '2.4G Wireless Mouse'}",Rii,2.4G Wireless Mouse
-https://www.amazon.com/dp/B09BB6LZNK,Sytas,"Sytas Home Office Chair Ergonomic, Mesh Desk Chair Lumbar Support, Ergonomic Computer Chair Adjustable Armrest : Home &amp; Kitchen",$129.99,4.3 out of 5 stars,"2,538 ratings",Home Office Desk Chairs,B09BB6LZNK,129.99,4.3,"
+""HUANUO"": 
+HUANUO Ergonomic Office Chair, High Back Desk Chair with S-shaped Backrest, Adjustable Lumbar Support, Headrest, Armrest, Mesh Computer Chair with Thicker Seat Cushion and Tilt Function, Black : Office Products","{'Brand': 'HUANUO', 'Product': 'Ergonomic Office Chair'}",HUANUO,Ergonomic Office Chair
+https://www.amazon.com/dp/B09J1TB35S,Logitech,"Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB receiver, Quiet clicks, 4 buttons, compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite : Electronics",$65.99,4.6 out of 5 stars,"8,984 ratings",Mice,B09J1TB35S,65.99,4.6,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
 1. First, analyze the input text carefully inside <thinking> tags:
@@ -5622,9 +6209,9 @@ If no clear brand or product can be determined, return:
 </result>
 
 Here is the text that you need to analyze associated with the given brand
-""Sytas"": 
-Sytas Home Office Chair Ergonomic, Mesh Desk Chair Lumbar Support, Ergonomic Computer Chair Adjustable Armrest : Home &amp; Kitchen","{'Brand': 'Sytas', 'Product': 'Home Office Chair Ergonomic'}",Sytas,Home Office Chair Ergonomic
-https://www.amazon.com/dp/B0BNK6F4QV,Bonuci,Bonuci 30 Pcs USB Wired Mouse Computer 3 Button Mice Bulk Corded USB Mouse for PC Desktop Laptop Computer Office School Home Classroom Supplies (Black) : Electronics,$41.99,4.3 out of 5 stars,44 ratings,Mice,B0BNK6F4QV,41.99,4.3,"
+""Logitech"": 
+Logitech Lift Vertical Ergonomic Mouse, Wireless, Bluetooth or Logi Bolt USB receiver, Quiet clicks, 4 buttons, compatible with Windows/macOS/iPadOS, Laptop, PC - Graphite : Electronics","{'Brand': 'Logitech', 'Product': 'Lift Vertical Ergonomic Mouse'}",Logitech,Lift Vertical Ergonomic Mouse
+https://www.amazon.com/dp/B07M6Y7355,EMEET,"EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Webcam for Online Calling/Conferencing, Zoom/Skype/Facetime/YouTube, Laptop/PC : Electronics",$34.99,4.3 out of 5 stars,"28,847 ratings",Webcams,B07M6Y7355,34.99,4.3,"
 You will extract the brand and product name from a product description text. Follow these steps precisely:
 
 1. First, analyze the input text carefully inside <thinking> tags:
@@ -5667,5 +6254,50 @@ If no clear brand or product can be determined, return:
 </result>
 
 Here is the text that you need to analyze associated with the given brand
-""Bonuci"": 
-Bonuci 30 Pcs USB Wired Mouse Computer 3 Button Mice Bulk Corded USB Mouse for PC Desktop Laptop Computer Office School Home Classroom Supplies (Black) : Electronics","{'Brand': 'Bonuci', 'Product': 'USB Wired Mouse'}",Bonuci,USB Wired Mouse
+""EMEET"": 
+EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Webcam for Online Calling/Conferencing, Zoom/Skype/Facetime/YouTube, Laptop/PC : Electronics","{'Brand': 'EMEET', 'Product': '1080P Webcam'}",EMEET,1080P Webcam
+https://www.amazon.com/dp/B0CF24ZDK7,Brick Attic,"Brick Attic Office Chair, Ergonomic Desk Chair with Lumbar Support and Flip-up Armrest, Height Adjustable Mesh Swivel Computer Office Chair Black : Home &amp; Kitchen",$139.99,4.4 out of 5 stars,228 ratings,Home Office Desk Chairs,B0CF24ZDK7,139.99,4.4,"
+You will extract the brand and product name from a product description text. Follow these steps precisely:
+
+1. First, analyze the input text carefully inside <thinking> tags:
+   - Look for the brand name, typically at the start or in a specific location
+   - Identify the product name, which usually follows the brand name
+   - Consider different text formats and potential variations
+
+2. Parse the text using these rules:
+   - Brand is typically the first word or a capitalized name before the product description
+   - Product name is the general category or specific type of item
+   - Ignore additional descriptive text after the product name
+
+3. Create the output as a Python dictionary with two keys: ""Brand"" and ""Product"".
+**Output ONLY the dictionary, nothing else. Do not include any tags, explanations, or extra text.**
+
+4. Important guidelines:
+   - Be precise in extraction
+   - If unsure, default to the most prominent text
+   - Trim any extra whitespace
+   - Do not include additional descriptors beyond the core brand and product name
+
+Example process:
+<example>
+Input: ""RisoPhy Mechanical Gaming Keyboard, RGB 104 Keys Ultra-Slim LED Backlit USB Wired Keyboard with Blue Switch...""
+<thinking>
+- Brand: RisoPhy
+- Product: Mechanical Gaming Keyboard
+</thinking>
+Output: {Brand: ""RisoPhy"", Product: ""Mechanical Gaming Keyboard""}
+</example>
+
+5. Generate the final output inside <result> tags:
+<result>
+{Brand: ""<extracted brand>"", Product: ""<extracted product name>""}
+</result>
+
+If no clear brand or product can be determined, return:
+<result>
+{Brand: ""Unknown"", Product: ""Unknown""}
+</result>
+
+Here is the text that you need to analyze associated with the given brand
+""Brick Attic"": 
+Brick Attic Office Chair, Ergonomic Desk Chair with Lumbar Support and Flip-up Armrest, Height Adjustable Mesh Swivel Computer Office Chair Black : Home &amp; Kitchen","{'Brand': 'Brick Attic', 'Product': 'Office Chair'}",Brick Attic,Office Chair
