@@ -17,8 +17,11 @@ Your task is to build a full product intelligence and review analytics data app 
 2) Aggregate reviews by country, enrich with country boundary geometries from OSM, and display a choropleth map colored by number of reviews with informative popups.
 3) Package the analytics into an interactive Component with a refresh button and generate a shareable PDF report.
 
-![JKI LINK](https://www.knime.com/just-knime-it)
+[Just Knime It LINK](https://www.knime.com/just-knime-it)
 
 # Solution-Space
 [ ✔️] 1) Import and refine the Products Excel sheet, to extract the ASIN product number from the product details sheet to form a key to connect to product reviews sheet.
 [✔️ ] 2) Extract the product names using a GenAI-LLM setup to tag every product and brand basis the 'Title' description column
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDgyMzM3OTA4XX0=
+-->
