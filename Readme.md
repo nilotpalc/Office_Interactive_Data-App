@@ -21,7 +21,8 @@ Your task is to build a full product intelligence and review analytics data app 
 
 # Solution-Space
 [ ✔️] 1) Import and refine the Products Excel sheet, to extract the ASIN product number from the product details sheet to form a key to connect to product reviews sheet.
+
 [✔️ ] 2) Extract the product names using a GenAI-LLM setup to tag every product and brand basis the 'Title' description column
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyMzM3OTA4XX0=
+eyJoaXN0b3J5IjpbLTE2OTQ2ODk5NTAsNDgyMzM3OTA4XX0=
 -->
